@@ -1,0 +1,7 @@
+String[] s = new String[]{'%a%','%b%','%c%','%d%','%e%','%f%','%g%','%h%','%i%','%j%','%k%','%l%','%m%','%n%','%o%','%p%','%q%','%r%','%s%','%t%','%u%','%v%','%w%','%x%','%y%','%z%',
+    '%!%','%@%','%#%','%$%','%^%','%&%','%*%','%(%','%)%','%-%','%+%','%=%','%|%','%{%','%[%','%}%','%]%','%:%','%;%','%<%','%,%','%>%','%.%','%?%','%/%','%~%','%`%'};
+List<Account> accList = new List<Account>();
+String queryString = 'SELECT Id, TW1_Numero__c FROM Account WHERE (TW1_Numero__c like :s)';
+accList = Database.query(queryString);
+
+System.debug('JJS Lista de contas: '+accList.Size());
